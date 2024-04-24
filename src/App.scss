@@ -1,0 +1,159 @@
+
+@use './font' as *;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'northead';
+    
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: black;
+  font-family: 'northead';
+  font-size: 30px;
+  font-weight: 500;
+}
+
+// ----------------------------------------
+
+.page-bottom-wrap {
+  background-image: url("./assets/images/vecteezy_abstract-bokeh-glitter-lights-background-of-flickering-gold_6241073.jpg");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  height: 128px;
+  padding-top: 20px;
+  text-align: center;
+  color: gold;
+  font-size: 67px;
+}
+
+.hero {
+  width: auto;
+  height: 550px;
+  background-image: url(./assets/images/photo-1593887937265-2a09787dcc19.avif);
+  background-size: cover;
+  background-position: center;
+  // background-position: bottom;
+}
+
+// -------------- Filters -------------- //
+
+.filter-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .search-bar,
+  .show-all-button,
+  .select-bar {
+    width: 228px;
+    height: 44px;
+    outline: none;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 30px;
+    font-size: 30px;
+    background-color: rgb(116, 69, 42);
+    color: white;
+    &:hover {
+      background-color: rgb(88, 52, 32);
+    }
+
+    &:focus {
+      border: 2px solid orange;
+    }
+  }
+
+  .search-bar {
+    padding-left: 20px;
+
+    &::placeholder {
+      color: white;
+    }
+  }
+
+  .show-all-button {
+  }
+
+  .select-bar {
+    padding-left: 30px;
+  }
+}
+
+// -------------- Cards -------------- //
+.cards-wrap {
+  margin: 0 auto;
+}
+
+.card-ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .card-item {
+    display: block;
+    text-align: center;
+    padding-top: 50px;
+    line-height: 30px;
+    width: 229px;
+    height: 327px;
+    border-radius: 10px;
+    margin: 35px;
+    background-image: url(./assets/images/unnamed.png);
+    background-position: center;
+    background-size: 143%;
+    color: hsla(39,100%,68%,1);
+    text-shadow: 2px 2px 2px black;
+    // border: 2px solid white;
+    border: 4px solid black;
+    transition: all ease-in-out 0.3s;
+    position: relative;
+    &:hover {
+      background-size: 150%;
+      // border: 4px solid orange;
+      border: 2px solid orange;
+    }
+    p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .phone{
+      font-size: 25px;
+    }
+
+    .link-button {
+      display: block;
+      margin: 10px;
+      background-color: darkgray;
+      color: white;
+      border-radius: 6px;
+      margin-top: 3rem;
+      //border: 1px solid white;
+      &:hover {
+        background-color:  rgb(116, 69, 42);
+        color:white;
+      }
+    }
+  }
+}
